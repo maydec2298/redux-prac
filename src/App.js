@@ -1,4 +1,6 @@
 import React from "react";
+import Router from "./shared/Router"
+
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { addNumber, minusNumber } from "./redux/modules/counter"
@@ -31,6 +33,7 @@ const App = () => {
 
   return (
     <div>
+      <Router />
       <div>{globalNumber}</div>
       <input type="number" onChange={onChangeHandler} />
       <button onClick={onClickAddNumberHandler} >더하기</button>
